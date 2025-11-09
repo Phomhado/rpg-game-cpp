@@ -2,10 +2,11 @@
 #include <iostream>
 using namespace std;
 
-Player::Player(string n, string g, string c) {
+Player::Player(string n, string g, string c, Attributes a) {
     player_name = n;
     player_gender = g;
     player_class = c;
+    attributes = a;
 
     if (c == "knight") {
         player_health_points = 120;

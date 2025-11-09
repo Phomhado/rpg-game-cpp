@@ -1,5 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+#include "attributes.h"
 
 #include <iostream>
 using namespace std;
@@ -11,9 +12,9 @@ public:
     int player_health_points;
     int player_mana;
     string player_gender;
-
+    Attributes attributes;
     
-    Player(string n, string g, string c);
+    Player(string n, string g, string c, Attributes a);
     void showStats();
 
     void playerHeal() {
