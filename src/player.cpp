@@ -1,4 +1,5 @@
 #include "player.h"
+#include "attributes.h"
 #include <iostream>
 using namespace std;
 
@@ -24,5 +25,8 @@ void Player::showStats() {
     cout << "Class: " << player_class << endl;
     cout << "HP: " << player_health_points << endl;
     cout << "Mana: " << player_mana << endl;
+    cout << "STR: " << attributes.strength << endl;
+    cout << "CHA: " << attributes.charisma << endl;
+    cout << "INT: " << attributes.intelligence << endl;
     cout << "-------------------\n";
 }
