@@ -64,5 +64,5 @@ int main() {
     Player player = getPlayerInfo();
     player.showStats();
 
-    startingScene();
+    startingScene(player);
 }
