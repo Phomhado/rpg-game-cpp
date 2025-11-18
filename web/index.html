@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RPG Dungeon (WebASM)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <section class="panel">
+      <header>
+        <h1>Dark Cavern</h1>
+        <p>WebAssembly prototype for the terminal RPG.</p>
+      </header>
+      <form id="player-form" class="card">
+        <h2>Build your character</h2>
+        <label>Name <input type="text" name="name" value="Acolyte" required /></label>
+        <label>Gender <input type="text" name="gender" value="unknown" /></label>
+        <label>Class
+          <select name="class">
+            <option value="knight">Knight</option>
+            <option value="wizard">Wizard</option>
+          </select>
+        </label>
+        <div class="attrs">
+          <label>STR <input type="number" name="strength" value="3" min="0" max="9" /></label>
+          <label>CHA <input type="number" name="charisma" value="3" min="0" max="9" /></label>
+          <label>INT <input type="number" name="intelligence" value="3" min="0" max="9" /></label>
+        </div>
+        <button type="submit">Send to engine</button>
+        <p class="hint">Uses the exported WebAssembly API; no page reloads needed.</p>
+      </form>
+
+      <section class="card" id="choices">
+        <h2>First scene</h2>
+        <div class="buttons">
+          <button data-choice="1">Break free</button>
+          <button data-choice="2">Search for tools</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="panel log">
+      <header>
+        <h2>Output</h2>
+        <p id="status">Loading WebAssembly...</p>
+      </header>
+      <pre id="log"></pre>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
